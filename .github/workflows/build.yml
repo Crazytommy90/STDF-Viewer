@@ -29,23 +29,23 @@ jobs:
           architecture: x64
 
       # setup rust env and build helper
-#      - uses: dtolnay/rust-toolchain@stable
-#      - name: Build Rust-STDF-Helper
-#        uses: PyO3/maturin-action@v1
-#        with:
-#          target: x86_64
-#          working-directory: ./deps/rust_stdf_helper
-#          args: --release --out dist
-      
-#      - name: Install Rust-STDF-Helper
-#        working-directory: ./deps/rust_stdf_helper
-#        run: |
-#          pip install rust_stdf_helper --no-index --find-links dist --force-reinstall
-#         python -c "import rust_stdf_helper"
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build Rust-STDF-Helper
+        uses: PyO3/maturin-action@v1
+        with:
+          target: x86_64
+          working-directory: ./deps/rust_stdf_helper
+          args: --release --out dist
+     
+      - name: Install Rust-STDF-Helper
+        working-directory: ./deps/rust_stdf_helper
+        run: |
+          pip install rust_stdf_helper --no-index --find-links dist --force-reinstall
+         python -c "import rust_stdf_helper"
 
-#      - name: Get appdmg for dmg build
-#        if: runner.os == 'macOS'
-#       run: npm install -g appdmg
+      - name: Get appdmg for dmg build
+        if: runner.os == 'macOS'
+       run: npm install -g appdmg
          
       # install numpy
       - name: Install numpy vanilla
