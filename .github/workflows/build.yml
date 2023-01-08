@@ -41,11 +41,11 @@ jobs:
         working-directory: ./deps/rust_stdf_helper
         run: |
           pip install rust_stdf_helper --no-index --find-links dist --force-reinstall
-         python -c "import rust_stdf_helper"
+          python -c "import rust_stdf_helper"
 
       - name: Get appdmg for dmg build
         if: runner.os == 'macOS'
-       run: npm install -g appdmg
+        run: npm install -g appdmg
          
       # install numpy
       - name: Install numpy vanilla
