@@ -335,6 +335,8 @@ impl RecordTracker {
     /// if no default limit can be found for test_id
     #[inline(always)]
     pub fn is_ptr_limits_changed(
+）
+/*        
         &self,
         test_id: usize,
         llimit: f32,
@@ -360,7 +362,7 @@ impl RecordTracker {
         }?;
         Ok((llimit_changed, hlimit_changed))
     }
-
+*/
     #[inline(always)]
     pub fn get_program_section(&self, file_id: usize) -> Option<String> {
         // use `;` to join all sections
