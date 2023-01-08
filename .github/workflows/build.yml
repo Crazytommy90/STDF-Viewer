@@ -27,7 +27,7 @@ jobs:
         with:
           python-version: 3.9
           architecture: x64
-
+/*
       # setup rust env and build helper
       - uses: dtolnay/rust-toolchain@stable
       - name: Build Rust-STDF-Helper
@@ -46,7 +46,7 @@ jobs:
       - name: Get appdmg for dmg build
         if: runner.os == 'macOS'
         run: npm install -g appdmg
-          
+ */         
       # install numpy
       - name: Install numpy vanilla
         if: runner.os == 'Windows'
