@@ -334,32 +334,30 @@ impl RecordTracker {
     /// ## Error
     /// if no default limit can be found for test_id
     #[inline(always)]
-    pub fn is_ptr_limits_changed(
-）
-/*        
+    pub fn is_ptr_limits_changed(        
         &self,
         test_id: usize,
         llimit: f32,
         hlimit: f32,
     ) -> Result<(bool, bool), StdfHelperError> {
         // llimit
-        let llimit_changed = match self.default_llimit.get(&test_id) {
-            Some(dft_ll) => {
-                // NAN - NAN > EPSILON is `false`
-                // meaning if limit is NAN, it will return false
-                Ok((llimit - *dft_ll).abs() > f32::EPSILON)
-            }
-            None => Err(StdfHelperError {
-                msg: "Default low limit can not be read...this should never happen".to_string(),
-            }),
-        }?;
+        //let llimit_changed = match self.default_llimit.get(&test_id) {
+        //    Some(dft_ll) => {
+        //        // NAN - NAN > EPSILON is `false`
+        //        // meaning if limit is NAN, it will return false
+        //        Ok((llimit - *dft_ll).abs() > f32::EPSILON)
+        //    }
+        //    None => Err(StdfHelperError {
+        //        msg: "Default low limit can not be read...this should never happen".to_string(),
+        //    }),
+        //}?;
         // hlimit
-        let hlimit_changed = match self.default_hlimit.get(&test_id) {
-            Some(dft_hl) => Ok((hlimit - *dft_hl).abs() > f32::EPSILON),
-            None => Err(StdfHelperError {
-                msg: "Default high limit can not be read...this should never happen".to_string(),
-            }),
-        }?;
+        //let hlimit_changed = match self.default_hlimit.get(&test_id) {
+        //    Some(dft_hl) => Ok((hlimit - *dft_hl).abs() > f32::EPSILON),
+        //    None => Err(StdfHelperError {
+        //        msg: "Default high limit can not be read...this should never happen".to_string(),
+        //    }),
+        //}?;
         Ok((llimit_changed, hlimit_changed))
     }
 */
